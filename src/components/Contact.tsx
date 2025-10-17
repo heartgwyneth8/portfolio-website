@@ -34,17 +34,17 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail size={24} />,
-      text: 'your.email@example.com',
-      href: 'mailto:your.email@example.com'
+      text: 'heartgwynethc@gmail.com',
+      href: 'mailto:heartgwynethc@gmail.com'
     },
     {
       icon: <Phone size={24} />,
-      text: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      text: '0993 757 3628',
+      href: 'tel:0993 757 3628'
     },
     {
       icon: <MapPin size={24} />,
-      text: 'Your City, Country',
+      text: 'Mabini, Batangas, Philippines',
       href: '#'
     }
   ];
@@ -52,7 +52,7 @@ const Contact = () => {
   // Prevent hydration mismatch by not rendering form until mounted
   if (!isMounted) {
     return (
-      <section id="contact" className="py-20 bg-primary">
+      <section id="contact" className="py-20" style={{backgroundColor: '#f2efe1'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-text mb-4">

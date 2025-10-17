@@ -1,114 +1,89 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { GraduationCap, Users, Calendar, MapPin, Award } from 'lucide-react';
+import { GraduationCap, Users, Calendar, MapPin, Award, Star } from 'lucide-react';
 
 const Education = () => {
   const educationData = [
     {
       level: "College",
-      degree: "Bachelor of Science in Computer Science",
-      school: "University of Technology",
-      period: "2020 - 2024",
-      location: "Manila, Philippines",
+      degree: "Bachelor of Science in Information Technology",
+      school: "University of Batangas- The National Engineering University",
+      period: "2023 - Present",
+      location: "Mabini, Batangas, Philippines",
       gpa: "3.8/4.0",
       achievements: [
-        "Summa Cum Laude",
-        "Dean's Lister (8 Semesters)",
-        "Best Thesis Award"
+        "Cum Laude",
+        "Dean's Lister (8 Semesters)"
       ],
       organizations: [
         {
           name: "Google Developer Student Club",
           position: "Technical Lead",
-          period: "2022 - 2024",
-          description: "Led workshops on web development and organized hackathons for 500+ members"
+          period: "2022 - 2024"
         },
         {
           name: "ACM Student Chapter",
           position: "Active Member",
-          period: "2021 - 2024",
-          description: "Participated in coding competitions and tech talks"
+          period: "2021 - 2024"
         }
       ]
     },
     {
       level: "Senior High School",
-      strand: "Science, Technology, Engineering, and Mathematics (STEM)",
-      school: "Manila Science High School",
-      period: "2018 - 2020",
-      location: "Manila, Philippines",
-      gpa: "95.2%",
+      strand: "Technical-Vocational-Livelihood in Information and Communications Technology",
+      school: "Anselmo A. Sandoval Memorial National High School",
+      period: "2021 - 2023",
+      location: "Mabini, Batangas, Philippines",
+      gpa: "91.2%",
       achievements: [
-        "With High Honors",
-        "Science Fair Champion",
-        "Math Olympiad Finalist"
+        "With Honors",
       ],
       organizations: [
         {
           name: "Student Government",
-          position: "STEM Representative",
-          period: "2019 - 2020",
-          description: "Represented STEM students in school decision-making"
+          position: "ICT Representative",
+          period: "2022 - 2023"
         },
         {
-          name: "Robotics Club",
-          position: "Programming Team Lead",
-          period: "2018 - 2020",
-          description: "Led programming team in national robotics competitions"
+          name: "Programming Club",
+          position: "Team Lead",
+          period: "2021 - 2023"
         }
       ]
     },
     {
       level: "High School",
-      school: "Manila National High School",
-      period: "2014 - 2018",
-      location: "Manila, Philippines",
-      gpa: "93.5%",
+      school: "Mabini National High School",
+      period: "2017 - 2021",
+      location: "Solo, Mabini, Philippines",
+      gpa: "88.5%",
       achievements: [
-        "With Honors",
-        "Science Club President",
-        "Debate Team Captain"
+        "Achiever"
       ],
       organizations: [
         {
           name: "Science Club",
           position: "President",
-          period: "2017 - 2018",
-          description: "Organized science fairs and community outreach programs"
-        },
-        {
-          name: "Debate Society",
-          position: "Team Captain",
-          period: "2016 - 2018",
-          description: "Led debate team to regional championships"
+          period: "2020 - 2021",
         }
       ]
     },
     {
       level: "Elementary",
-      school: "Manila Elementary School",
-      period: "2008 - 2014",
-      location: "Manila, Philippines",
+      school: "San Teodoro Elementary School",
+      period: "2011 - 2017",
+      location: "San Teodoro, Mabini, Philippines",
       achievements: [
-        "Valedictorian",
-        "Math Olympiad Champion",
-        "Student Council President"
+        "Achiever"
       ],
       organizations: [
         {
           name: "Student Council",
-          position: "President",
-          period: "2013 - 2014",
-          description: "Represented student body and organized school events"
+          position: "Vice President",
+          period: "2016 - 2017"
         },
-        {
-          name: "Math Club",
-          position: "Member",
-          period: "2012 - 2014",
-          description: "Participated in math competitions and peer tutoring"
-        }
-      ]
+    ]
     }
   ];
 
@@ -131,28 +106,31 @@ const Education = () => {
   };
 
   return (
-    <section id="education" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="education" className="py-20 relative overflow-hidden" style={{backgroundColor: '#f2efe1'}}>
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-pink-800 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-rose-800 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <motion.span 
-            className="text-secondary font-semibold text-lg mb-4 block"
+            className="text-pink-800 font-semibold text-lg mb-4 block"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            Academic Journey
           </motion.span>
-          <h2 className="text-5xl md:text-6xl font-bold text-dark mb-6">
-            Education & <span className="gradient-text">Leadership</span>
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Education & <span className="text-pink-700">Leadership</span>
           </h2>
-          <p className="text-xl text-dark/70 max-w-2xl mx-auto">
-            My academic background and organizational experiences that shaped my skills and character.
-          </p>
+
         </motion.div>
 
         <motion.div
@@ -162,8 +140,8 @@ const Education = () => {
           viewport={{ once: true }}
           className="relative"
         >
-          {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-secondary/30"></div>
+          {/* Enhanced Timeline line with gradient */}
+          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-pink-800 to-rose-700 shadow-lg"></div>
 
           {educationData.map((education, index) => (
             <motion.div
@@ -173,92 +151,112 @@ const Education = () => {
                 index % 2 === 0 ? 'md:flex-row-reverse' : ''
               } mb-16`}
             >
-              {/* Timeline dot */}
-              <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-secondary rounded-full border-4 border-white z-10"></div>
-
-              {/* Content */}
-              <div className={`md:w-1/2 ${
-                index % 2 === 0 ? 'md:pl-12' : 'md:pr-12'
-              } ml-16 md:ml-0`}>
+              {/* Enhanced Timeline dot with glow effect */}
+              <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-gradient-to-br from-pink-800 to-rose-700 rounded-full border-4 border-white shadow-lg z-10 flex items-center justify-center">
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-primary rounded-2xl p-8 shadow-lg border border-secondary/20 hover-lift"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ delay: index * 0.1 + 0.3 }}
+                  className="w-2 h-2 bg-white rounded-full"
+                />
+              </div>
+
+              {/* Content Card */}
+              <div className={`md:w-1/2 ${
+                index % 2 === 0 ? 'md:pl-16' : 'md:pr-16'
+              } ml-20 md:ml-0`}>
+                <motion.div
+                  whileHover={{ 
+                    scale: 1.02,
+                    y: -5
+                  }}
+                  className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-pink-200 hover:border-pink-300 transition-all duration-300"
                 >
-                  {/* Education Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-dark mb-2">
-                        {education.level}
-                      </h3>
-                      <p className="text-lg font-semibold text-secondary mb-1">
+                  {/* Education Header with improved styling */}
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="flex-1">
+                      <div className="flex items-center mb-3">
+                        <div className="w-3 h-3 bg-pink-700 rounded-full mr-3"></div>
+                        <h3 className="text-2xl font-bold text-gray-900">
+                          {education.level}
+                        </h3>
+                      </div>
+                      <p className="text-lg font-semibold text-pink-700 mb-2 leading-tight">
                         {education.degree || education.strand || education.school}
                       </p>
-                      <p className="text-dark/70">{education.school}</p>
+                      <p className="text-gray-600 font-medium">{education.school}</p>
                     </div>
-                    <div className="bg-secondary/20 rounded-full p-3">
-                      <GraduationCap size={24} className="text-secondary" />
+                    <div className="bg-gradient-to-br from-pink-700 to-rose-600 rounded-2xl p-4 text-white shadow-lg">
+                      <GraduationCap size={28} />
                     </div>
                   </div>
 
-                  {/* Details */}
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center text-dark/70">
-                      <Calendar size={16} className="mr-2 text-secondary" />
-                      <span>{education.period}</span>
+                  {/* Enhanced Details Section */}
+                  <div className="space-y-4 mb-6 p-4 bg-pink-50 rounded-2xl border border-pink-100">
+                    <div className="flex items-center text-gray-700">
+                      <Calendar size={18} className="mr-3 text-pink-700" />
+                      <span className="font-medium">{education.period}</span>
                     </div>
-                    <div className="flex items-center text-dark/70">
-                      <MapPin size={16} className="mr-2 text-secondary" />
-                      <span>{education.location}</span>
+                    <div className="flex items-center text-gray-700">
+                      <MapPin size={18} className="mr-3 text-pink-700" />
+                      <span className="font-medium">{education.location}</span>
                     </div>
                     {education.gpa && (
-                      <div className="flex items-center text-dark/70">
-                        <Award size={16} className="mr-2 text-secondary" />
-                        <span>GPA: {education.gpa}</span>
+                      <div className="flex items-center text-gray-700">
+                        <Award size={18} className="mr-3 text-pink-700" />
+                        <span className="font-medium">GPA: {education.gpa}</span>
                       </div>
                     )}
                   </div>
 
-                  {/* Achievements */}
+                  {/* Achievements with improved styling */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-dark mb-3 flex items-center">
-                      <Award size={18} className="mr-2 text-secondary" />
+                    <h4 className="font-bold text-gray-900 mb-4 flex items-center text-lg">
+                      <Star size={20} className="mr-3 text-pink-700" />
                       Key Achievements
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-3">
                       {education.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex items-start text-dark/80">
-                          <span className="text-secondary mr-2">•</span>
+                        <motion.li 
+                          key={idx}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: idx * 0.1 }}
+                          className="flex items-center text-gray-700 bg-pink-50 rounded-xl p-3 border border-pink-100"
+                        >
+                          <div className="w-2 h-2 bg-pink-600 rounded-full mr-3"></div>
                           {achievement}
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Organizations */}
+                  {/* Enhanced Organizations Section */}
                   <div>
-                    <h4 className="font-semibold text-dark mb-3 flex items-center">
-                      <Users size={18} className="mr-2 text-secondary" />
-                      Organizations & Leadership
+                    <h4 className="font-bold text-gray-900 mb-4 flex items-center text-lg">
+                      <Users size={20} className="mr-3 text-pink-700" />
+                      Leadership & Organizations
                     </h4>
                     <div className="space-y-4">
                       {education.organizations.map((org, idx) => (
                         <motion.div
                           key={idx}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ delay: idx * 0.1 }}
                           whileHover={{ x: 5 }}
-                          className="bg-white rounded-lg p-4 border border-secondary/20"
+                          className="bg-white rounded-2xl p-5 border border-pink-200 shadow-lg hover:shadow-xl transition-all duration-300"
                         >
-                          <div className="flex justify-between items-start mb-2">
-                            <h5 className="font-semibold text-dark">{org.name}</h5>
-                            <span className="text-sm bg-secondary/20 text-dark px-2 py-1 rounded-full">
+                          <div className="flex justify-between items-start mb-3">
+                            <h5 className="font-bold text-gray-900 text-lg">{org.name}</h5>
+                            <span className="text-sm bg-gradient-to-r from-pink-700 to-rose-600 text-white px-3 py-1 rounded-full font-medium">
                               {org.period}
                             </span>
                           </div>
-                          <p className="text-secondary font-medium text-sm mb-1">
+                          <p className="text-pink-700 font-semibold text-sm mb-2">
                             {org.position}
                           </p>
-                          <p className="text-dark/70 text-sm">
-                            {org.description}
-                          </p>
+
                         </motion.div>
                       ))}
                     </div>
@@ -269,16 +267,16 @@ const Education = () => {
           ))}
         </motion.div>
 
-        {/* Additional Skills Summary */}
+        {/* Enhanced Skills Summary */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 text-center"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-20 text-center"
         >
           <div className="bg-gradient-to-r from-primary to-secondary/30 rounded-3xl p-8 border border-secondary/20">
             <h3 className="text-3xl font-bold text-dark mb-4">
-              Skills Developed Through Education
+              Skills
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
@@ -288,7 +286,7 @@ const Education = () => {
                 "Technical Research",
                 "Problem Solving",
                 "Event Organization",
-                "Mentoring",
+                "Critical Thinking",
                 "Academic Writing"
               ].map((skill, index) => (
                 <motion.div
@@ -297,7 +295,7 @@ const Education = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-white rounded-xl p-4 shadow-lg border border-secondary/20"
+                  className="bg-white rounded-2xl p-5 shadow-lg border border-pink-200 hover:border-pink-300 transition-all duration-300"
                 >
                   <p className="text-dark font-medium text-center">{skill}</p>
                 </motion.div>

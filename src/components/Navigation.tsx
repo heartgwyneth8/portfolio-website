@@ -38,7 +38,7 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold gradient-text"
           >
-            Heart's
+            Heart&apos;s
           </motion.div>
 
           {/* Desktop Menu */}

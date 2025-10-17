@@ -59,7 +59,7 @@ const Contact = () => {
               Get In Touch
             </h2>
             <p className="text-xl text-text/70 max-w-2xl mx-auto">
-              Have a project in mind or want to collaborate? I'd love to hear from you.
+              Have a project in mind or want to collaborate? I&apos;d love to hear from you.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -87,7 +87,7 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-text/70 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you.
+            Have a project in mind or want to collaborate? I&apos;d love to hear from you.
           </p>
         </motion.div>
 
@@ -98,9 +98,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold text-text mb-6">Let's Connect</h3>
+            <h3 className="text-2xl font-bold text-text mb-6">Let&apos;s Connect</h3>
             <p className="text-text/80 mb-8">
-              I'm always open to discussing new opportunities, creative ideas, 
+              I&apos;m always open to discussing new opportunities, creative ideas, 
               or opportunities to be part of your vision.
             </p>
             

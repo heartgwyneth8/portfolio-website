@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Linkedin, Mail, ArrowRight, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowRight, Download } from 'lucide-react';
+import Image from 'next/image';
 
 const Hero = () => {
   const containerVariants = {
@@ -60,11 +61,13 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
               className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white/10 overflow-hidden border-4 border-secondary shadow-2xl"
             >
-              <img 
-                src="/images/pfp.png" 
-                alt="Heart Gwyneth"
-                className="w-full h-full object-scale-down" // Change from object-cover to object-scale-down
-              />
+              <Image 
+  src="/images/pfp.png" 
+  alt="Heart Gwyneth"
+  width={320}
+  height={320}
+  className="w-full h-full object-cover"
+/>
               
             </motion.div>
           </motion.div>

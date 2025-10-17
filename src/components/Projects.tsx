@@ -2,10 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
-import { useState } from 'react';
 
 const Projects = () => {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const projects = [
     {
@@ -96,8 +94,6 @@ const Projects = () => {
                 y: -8,
                 scale: 1.02
               }}
-              onHoverStart={() => setHoveredProject(project.id)}
-              onHoverEnd={() => setHoveredProject(null)}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="group relative bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden hover:shadow-2xl border border-pink-200 hover:border-pink-300 transition-all duration-300"
             >

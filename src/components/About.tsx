@@ -5,36 +5,40 @@ import {
   Code2, 
   Server,
   Cloud,
-  Zap,
   Palette,
   Terminal
 } from 'lucide-react';
 
-// React Icons imports - corrected names
+// React Icons imports
 import { 
   SiHtml5, 
   SiCss3, 
   SiJavascript, 
-  SiTypescript, 
   SiReact, 
   SiNextdotjs,
   SiTailwindcss,
   SiNodedotjs,
   SiPython,
-  SiPostgresql,
-  SiMongodb,
   SiGit,
   SiDocker,
   SiVercel,
-  SiFramer
 } from 'react-icons/si';
 
 // Additional icons from other sets
 import { FaJava } from 'react-icons/fa';
 import { SiC } from 'react-icons/si';
 
+// Define Tech type
+interface Tech {
+  name: string;
+  icon: React.ReactElement;
+  level: number;
+  category: string;
+  color: string;
+}
+
 const About = () => {
-  const techStacks = [
+  const techStacks: Tech[] = [
     // Frontend Technologies
     { 
       name: "HTML", 
@@ -138,13 +142,13 @@ const About = () => {
       icon: <Code2 className="w-8 h-8" />,
       title: "Frontend Architecture",
       description: "Building scalable, responsive, and accessible user interfaces with modern frameworks and best practices.",
-      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+      technologies: ["React", "Next.js", "Tailwind CSS"]
     },
     {
       icon: <Server className="w-8 h-8" />,
       title: "Backend Development",
       description: "Designing robust server-side solutions, RESTful APIs, and database architectures for high-performance applications.",
-      technologies: ["Node.js", "Python", "PostgreSQL", "MongoDB"]
+      technologies: ["Node.js", "Python"]
     },
     {
       icon: <Cloud className="w-8 h-8" />,
@@ -322,7 +326,12 @@ const About = () => {
 };
 
 // Separate Tech Card Component for better organization
-const TechCard = ({ tech, index }: { tech: any; index: number }) => (
+interface TechCardProps {
+  tech: Tech;
+  index: number;
+}
+
+const TechCard = ({ tech, index }: TechCardProps) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.8 }}
     whileInView={{ opacity: 1, scale: 1 }}
